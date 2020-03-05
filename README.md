@@ -9,7 +9,9 @@
 
 【今日份每日一问】
 一个 Android 程序运行的时候 Application 的 onCreate 方法会走几遍？
+
 ——————————————————————
+
 一般情况下，一个 App 运行只会触发一次 Application 的 onCreate 方法。但是如果 App 使用到了多进程相关的内容，那么每个进程都会触发一次 Application 的 onCreate 方法。
 
 多进程的使用场景：
@@ -24,3 +26,6 @@
 1. 通过 android.os.Process.myPid() 获取到当前进程的 pid
 2. 通过 ActivityManager 的 getRunningAppProcesses() 获取所有进程的信息，轮询对比获取当前进程的进程名
 3. 将当前进程名与主进程名对比
+
+
+https://blog.csdn.net/qijinglai/article/details/81163574 一张图搞定，Activity的启动流程
